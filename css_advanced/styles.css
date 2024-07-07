@@ -234,3 +234,24 @@ xport default function FAQColumn1({ className = "" }: FAQColumn1Props) {
 interface FAQColumn1Props {
   className?: string;
 }
+
+export default function Footer({ className = "" }: FooterProps) {
+  return (
+    <div className={`flex w-full flex-col ${className}`}>
+      <footer className="relative flex flex-grow flex-wrap items-end justify-center gap-x-[736px] gap-y-2.5 bg-slate-900 pb-32 pl-56 pr-60 pt-[90px] leading-[normal] tracking-[0px] text-white min-[1430px]:flex-nowrap" >
+        <div className="font-coiny text-lg leading-[normal]">
+          SmileSchool
+        </div>
+        <Smile className="absolute left-40 top-[calc(50%_+_-14.73px_+_-14.75px)] h-7 w-9 flex-shrink-0" />
+        <div className="font-source_sans_pro absolute inset-x-[672px] bottom-10 h-[15px] text-xs leading-[normal] mix-blend-normal" >
+          ©smileschool 2020
+        </div>
+        <SocialMediaLinks />
+      </footer>
+    </div>
+  );
+}
+
+interface FooterProps {
+  className?: string;
+}
