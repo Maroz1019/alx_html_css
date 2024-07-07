@@ -87,3 +87,57 @@ export default function TestimonialCard({
 interface TestimonialCardProps {
   className?: string;
 }
+
+
+
+export default function TutorialCard({
+  className = "",
+  text = "8 min",
+  backgroundImageStyle = "",
+  title = "Diagonal Smile",
+  description = "Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.",
+  authorName = "Phillip Massey",
+}: TutorialCardProps) {
+  return (
+    <article
+      className={`z-0 flex flex-shrink-0 flex-col items-center gap-y-[7.6px] rounded-[5px] bg-white pb-[15px] drop-shadow-lg ${className}`}
+    >
+      <div className="absolute bottom-[11px] right-[22px] z-0 h-7 w-[34px] flex-shrink-0 text-right font-semibold leading-[27px] text-purple-400" >
+        {text}
+      </div>
+      <figure
+        className={`z-[1] flex items-center justify-center self-stretch bg-cover bg-center py-11 pl-12 pr-11 ${backgroundImageStyle}`}
+      >
+        <Play className="z-[1] h-16 w-16 flex-shrink-0" />
+      </figure>
+      <div className="self-stretch px-[13px] pt-2.5 font-bold leading-[normal] text-slate-900" >
+        {title}
+      </div>
+      <div className="flex items-center self-stretch pl-[13px] leading-6 text-slate-900/50" >
+        <p>{description}</p>
+      </div>
+      <div className="flex self-stretch pt-1.5">
+        <div className="flex items-center justify-end gap-x-[13px] pl-[13px]">
+          <Avatar className="h-[30px] w-[30px] flex-shrink-0" />
+          <div className="self-stretch pt-px">
+            <figcaption className="font-semibold leading-[27px] text-purple-400" >
+              {authorName}
+            </figcaption>
+          </div>
+        </div>
+      </div>
+      <div className="z-[5] flex items-end self-stretch px-[13px] pt-[6.4px]">
+        <Rating className="h-[15px] w-28 flex-shrink-0" />
+      </div>
+    </article>
+  );
+}
+
+interface TutorialCardProps {
+  className?: string;
+  text: string;
+  backgroundImageStyle: string;
+  title: string;
+  description: string;
+  authorName: string;
+}
