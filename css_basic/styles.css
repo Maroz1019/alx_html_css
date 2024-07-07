@@ -1,0 +1,31 @@
+
+body {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+main {
+    display: flex;
+    flex-direction: row; 
+    flex: auto; 
+}
+
+
+article {
+    flex: 2; 
+    overflow-y: auto; 
+}
+
+aside {
+    flex: 1; /* Aside takes 1/3 of the width */
+    overflow-y: auto; /* Allows scrolling within aside */
+}
+
+/* Styling for header and footer to differentiate them */
+header, footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
