@@ -203,3 +203,34 @@ export default function Part_3_free_membership({
 interface Part_3_free_membershipProps {
   className?: string;
 }
+
+xport default function FAQColumn1({ className = "" }: FAQColumn1Props) {
+  return (
+    <div className={`flex flex-shrink-0 flex-col gap-y-[73px] ${className}`}>
+      <div className="flex">
+        <div className="flex h-full w-full flex-shrink-0 flex-col items-start gap-y-[30px] overflow-clip" >
+          <h2 className="font-bold leading-[normal] text-slate-900">
+            How does this work?
+          </h2>
+          <p className="self-stretch">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div className="flex">
+        <div className="flex h-full w-full flex-shrink-0 flex-col items-start gap-y-[30px] overflow-clip" >
+          <div className="font-bold leading-[normal] text-slate-900">
+            How does this work?
+          </div>
+          <p className="self-stretch">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface FAQColumn1Props {
+  className?: string;
+}
