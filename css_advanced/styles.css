@@ -5,7 +5,7 @@
     <title>Document</title>
 
 
-    import TestimonialSection from "./TestimonialSection";
+   
 
 export default function HeroSection({ className = "" }: HeroSectionProps) {
   return (
@@ -53,5 +53,37 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
 }
 
 interface HeroSectionProps {
+  className?: string;
+}
+
+
+
+import ProfileAvatar from "./Users/Marwan/Desktop/CSS-Advanced/5.png";
+
+export default function TestimonialCard({
+  className = "",
+}: TestimonialCardProps) {
+  return (
+    <div
+      className={`z-0 flex flex-shrink-0 flex-col items-center pb-4 ${className}`}
+    >
+      <BackgroundImage className="absolute bottom-[-108px] left-[-260px] right-[-237px] top-[-108px] z-0" />
+      <div className="z-[1] flex flex-grow items-center justify-center gap-x-[53px] self-stretch" >
+        <ProfileAvatar className="h-40 w-40 flex-shrink-0" />
+        <div className="font-source_sans_pro flex-grow self-stretch text-[22px] leading-[34px] tracking-[0px] text-white" >
+          <blockquote>
+            « Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!
+          </blockquote>
+          <figcaption className="pt-[22px] font-bold">
+            Person Name
+          </figcaption>
+          <div className="italic">weather presenter</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface TestimonialCardProps {
   className?: string;
 }
