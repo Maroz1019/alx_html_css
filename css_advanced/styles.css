@@ -141,3 +141,65 @@ interface TutorialCardProps {
   description: string;
   authorName: string;
 }
+
+export default function Part_3_free_membership({
+  className = "",
+}: Part_3_free_membershipProps) {
+  return (
+    <div className={`flex w-full flex-col ${className}`}>
+      <section className="bg-t-bg-background-free-membership-tttsmile-tlorem-ipsum-lorem-ipsum-dolor-si-ttsmile-tlorem-ipsum-lorem-ipsum-dolor-si-ttsmile-tlorem-ipsum-lorem-ipsum-dolor-si-tttsmile-tlorem-ipsum-lorem-ipsum-dolor-si-tbutton_background font-source_sans_pro relative z-0 flex flex-grow flex-col items-center justify-end gap-y-[85px] bg-cover bg-center px-40 pb-[52px] pt-44 text-center text-sm tracking-[0px] text-white" >
+        <div className="absolute left-[calc(50%_+_-20px_+_-83px)] top-[70px] z-0 h-10 w-60 flex-shrink-0 text-[32px] leading-[normal]" >
+          <span className="font-bold text-purple-400">{"Free "}</span>
+          <span className="font-light">membership</span>
+        </div>
+        <section className="z-[2] flex flex-wrap justify-center gap-x-7 gap-y-7 self-stretch leading-[26px] min-[1430px]:flex-nowrap" >
+          <article className="flex w-64 flex-shrink-0 flex-col items-center gap-y-[13px]" >
+            <div className="flex items-center justify-center self-stretch pl-[0.09px]" >
+              <Smile className="h-9 w-11 flex-shrink-0" />
+            </div>
+            <div className="self-stretch pt-3.5 text-center text-lg font-semibold leading-[26px]" >
+              Lorem ipsum
+            </div>
+            <p className="w-52 text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </article>
+          <MembershipFeature
+            className="w-64"
+            text="Lorem ipsum"
+            containerWidth="w-56"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+           />
+          <MembershipFeature
+            className="w-64"
+            text="Lorem ipsum"
+            containerWidth="w-52"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+           />
+          <div className="flex w-64 flex-shrink-0 flex-col pl-0.5">
+            <div className="flex flex-grow flex-col items-center gap-y-[13px]" >
+              <div className="flex items-center justify-center self-stretch pl-[0.09px]" >
+                <Smile2 className="h-9 w-11 flex-shrink-0" />
+              </div>
+              <div className="self-stretch pt-3.5 text-center text-lg font-semibold leading-[26px]" >
+                Lorem ipsum
+              </div>
+              <p className="w-52 text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="z-[3] flex justify-center self-stretch pl-[1.1e-13px]" >
+          <button className="flex items-center justify-center rounded-[22px] bg-purple-400 py-[13px] pl-[22px] pr-5 font-semibold leading-[normal]" >
+            REGISTER FOR FREE
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+interface Part_3_free_membershipProps {
+  className?: string;
+}
